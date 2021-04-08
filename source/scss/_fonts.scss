@@ -1,6 +1,23 @@
 @include font("Lato Bold", "Lato-Bold", normal, normal);
-@include font("Montseratt", "Montseratt-Bold", bold, normal);
-@include font("Montseratt", "Montseratt-Medium", normal, normal);
+@include font("Montseratt", "Montserrat-Bold", bold, normal);
+@include font("Montseratt", "Montserrat-Medium", normal, normal);
 @include font("Nexabold", "Nexabold", normal, normal);
 @include font("OpenSans", "OpenSans_bold", bold, normal);
 @include font("OpenSans", "OpenSans_regular", normal, normal);
+
+// Font mixins
+@mixin lato-bold {
+  font-family: "Lato", "Arial", sans-serif;
+}
+
+@mixin montserrat {
+  font-family: "Montserrat", "Arial", sans-serif;
+}
+
+@mixin nexabold {
+  font-family: "Nexabold", "Arial", sans-serif;
+}
+
+@mixin opensans {
+  font-family: "OpenSans", "Arial", sans-serif;
+}

@@ -1,0 +1,86 @@
+.page-footer {
+  color: rgba($cl-white, 0.5);
+
+  background-color: #171717;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $cl-white;
+  }
+
+  a:active {
+    color: rgba($cl-white, 0.3);
+  }
+}
+
+.page-footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.page-footer__title {
+  margin: 0;
+  margin-bottom: 60px;
+
+  color: $cl-white;
+}
+
+.page-footer__contacts {
+  flex-shrink: 0;
+  width: 260px;
+}
+
+.page-footer__contact-list {
+  // Пока не требуется
+}
+
+.page-footer__social-links {
+  width: 200px;
+
+  color: $cl-white;
+
+  a:hover {
+    color: $cl-blue;
+  }
+
+  a:active {
+    color: rgba($cl-white, 0.3);
+  }
+}
+
+.page-footer__nav {
+  flex-shrink: 0;
+  width: 220px;
+}
+
+.page-footer__service {
+  flex-shrink: 0;
+  width: 250px;
+}
+
+.page-footer__form-wrapper {
+  width: 233px;
+}
+
+.page-footer__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.page-footer__copyright {
+  padding: 52px 0 48px;
+
+  color: #615555;
+  text-align: center;
+  font-size: 17px;
+  line-height: 17px;
+
+  background-color: #1a1a1a;
+}

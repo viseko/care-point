@@ -6,3 +6,38 @@
 @import "mixins";
 @import "fonts";
 @import "globals";
+
+// Layout
+@import "layout/wrapper";
+@import "layout/section-wrapper";
+
+// Elements
+@import "elements/btn";
+@import "elements/custom-list";
+@import "elements/menu-btn";
+@import "elements/section-title";
+@import "elements/section-intro";
+
+// Sections
+@import "sections/page-header";
+@import "sections/page-footer";
+@import "sections/promo";
+@import "sections/service";
+@import "sections/advantages";
+@import "sections/stats";
+@import "sections/blog";
+@import "sections/treatment";
+@import "sections/gallery";
+@import "sections/team";
+@import "sections/action-bar";
+
+// Blocks
+@import "blocks/accordeon";
+@import "blocks/blog-entry";
+@import "blocks/contacts-bottom";
+@import "blocks/contacts-top";
+@import "blocks/footer-form";
+@import "blocks/main-nav";
+@import "blocks/main-site-links";
+@import "blocks/social-links";
+@import "blocks/team-person";

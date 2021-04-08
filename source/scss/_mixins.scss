@@ -117,7 +117,7 @@
 }
 
 @mixin webp-bg($url) {
-  $trim-url: str-slice($url, 0, -4);
+  $trim-url: str-slice($url, 0, -5);
 
   .no-webp & {
     background-image: url("#{$url}");

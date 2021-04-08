@@ -1,0 +1,21 @@
+.main-site-links {
+  @include reset-list;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  color: $cl-lightgray;
+  font-family: "NexaBold", "Arial Black", sans-serif;
+  font-size: 20px;
+}
+
+.main-site-links__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.main-site-links__link {
+}
+
+.main-site-links__link--active {
+  color: $cl-black;
+}

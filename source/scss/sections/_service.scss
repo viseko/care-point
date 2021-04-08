@@ -1,0 +1,64 @@
+.service {
+  color: $cl-white;
+
+  background-color: $cl-blue;
+  background-image: linear-gradient(to right, #43b1d2, #37c3a8);
+}
+
+.service__list {
+  @include reset-list;
+
+  display: flex;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.service__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 75px 20px 55px;
+
+  text-align: center;
+}
+
+.service__icon-wrapper {
+  @include size(75px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+
+  background-color: $cl-white;
+  border-radius: 50%;
+}
+
+.service__title {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-family: "Montserrat", "Arial Black", sans-serif;
+  font-size: 30px;
+  line-height: normal;
+}
+
+.service__description {
+  margin: 0;
+}
+
+.service__item--treatment {
+  background-color: #43b1d2;
+}
+
+.service__item--emergency {
+  background-color: #3fb6c6;
+}
+
+.service__item--staff {
+  background-color: #3cbbbb;
+}
+
+.service__item--quality {
+  background-color: #37c3a8;
+}

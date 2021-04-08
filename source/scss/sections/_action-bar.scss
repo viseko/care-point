@@ -1,0 +1,23 @@
+.action-bar {
+  padding: 68px 0 54px;
+
+  background-color: #e2e2e2;
+}
+
+.action-bar__wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.action-bar__title {
+  @include montserrat;
+
+  color: #494949;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.action-bar__link {
+  font-size: 21.18px;
+}

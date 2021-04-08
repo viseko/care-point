@@ -1,0 +1,80 @@
+.advantages {
+  // Пока не требуется
+}
+
+.advantages__wrapper {
+  @include webp-bg("../img/bg/doctor-desktop.png");
+
+  padding-top: 110px;
+  padding-bottom: 70px;
+  min-height: 855px;
+
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 337px 598px;
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 25px;
+
+  text-align: center;
+}
+
+.advantages__intro {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0 140px;
+
+  text-align: center;
+}
+
+.advantages__list {
+  @include reset-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.advantages__item {
+  width: calc((100% - 455px) / 2);
+  margin-top: 90px;
+
+  &:not(:nth-child(2n + 2)) {
+    margin-right: 455px;
+  }
+}
+
+.advantages__item-heading {
+  display: flex;
+  align-items: center;
+}
+
+.advantages__icon-wrapper {
+  @include size(75px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 17px;
+
+  background-color: $cl-blue;
+  border-radius: 50%;
+}
+
+.advantages__icon {
+  fill: $cl-white;
+}
+
+.advantages__item-title {
+  @include montserrat;
+
+  font-weight: bold;
+  font-size: 30px;
+  line-height: normal;
+}
+
+.advantages__item-content {
+  margin: 0;
+}

@@ -1,0 +1,56 @@
+.contacts-top {
+  @include reset-list;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.contacts-top__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &:not(:nth-child(3n + 3)) {
+    margin-right: 10px;
+  }
+}
+
+.contacts-top__icon-wrapper {
+  @include size(50px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+
+  color: $cl-white;
+
+  background-color: $cl-blue;
+  border-radius: 50%;
+}
+
+.contacts-top__icon {
+  // Пока не требуется
+}
+
+.contacts-top__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-top__first-line {
+  margin: 0;
+
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.contacts-top__bottom-line {
+  margin: 0;
+}
+
+.contacts-top__link {
+}

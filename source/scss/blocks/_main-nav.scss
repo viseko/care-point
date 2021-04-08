@@ -1,0 +1,18 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 37px 0;
+}
+
+.main-nav__site-navigation {
+  max-width: 900px;
+}
+
+.main-nav__social-links {
+  width: 220px;
+
+  a {
+    color: $cl-black;
+  }
+}

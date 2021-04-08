@@ -1,0 +1,55 @@
+.team-person {
+  @include montserrat;
+}
+
+.team-person__photo-wrapper {
+  @include size(280px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 35px;
+  overflow: hidden;
+
+  background-color: $cl-lightgray;
+  border-radius: 50%;
+}
+
+.team-person__photo {
+  display: block;
+  width: 100%;
+}
+
+.team-person__name {
+  margin: 0;
+  margin-bottom: 15px;
+
+  font-size: 25px;
+  line-height: 25px;
+}
+
+.team-person__rank {
+  margin: 0;
+  margin-bottom: 25px;
+
+  font-size: 18px;
+  line-height: normal;
+}
+
+.team-person__contacts {
+  justify-content: center;
+  align-items: center;
+
+  a {
+    color: $cl-blue;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.team {
+  padding-top: 145px;
+  padding-bottom: 130px;
+
+  text-align: center;
+}
+
+.team__intro {
+  margin-bottom: 45px;
+  padding: 0 35px;
+}
+
+.team__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.team__person {
+  width: 280px;
+  margin-top: 40px;
+}

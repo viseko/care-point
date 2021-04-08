@@ -1,0 +1,24 @@
+.social-links {
+  @include reset-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.social-links__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-links__link {
+  display: flex;
+  align-items: flex-end;
+}
+
+.social-links__icon {
+  position: relative;
+
+  &--facebook {
+    top: 1px;
+  }
+}

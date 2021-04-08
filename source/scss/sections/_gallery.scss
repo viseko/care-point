@@ -1,0 +1,42 @@
+.gallery {
+  @include webp-bg("../img/bg/gallery-desktop.jpg");
+
+  padding: 94px 0;
+
+  color: $cl-white;
+  text-align: center;
+
+  background-size: cover;
+}
+
+.gallery__title {
+  color: $cl-white;
+}
+
+.gallery__intro {
+  padding: 0 40px;
+}
+
+.gallery__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.gallery__photo {
+  @include size(344px, 209px);
+
+  display: block;
+  margin-top: 40px;
+  overflow: hidden;
+
+  img {
+    display: block;
+    transition: 0.2s linear;
+  }
+
+  &:hover img {
+    transform: scale(1.02);
+  }
+}

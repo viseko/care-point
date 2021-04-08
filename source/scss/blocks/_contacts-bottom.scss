@@ -1,0 +1,33 @@
+.contacts-bottom {
+  @include reset-list;
+}
+
+.contacts-bottom__item {
+  display: flex;
+  margin-bottom: 45px;
+}
+
+.contacts-bottom__icon-wrapper {
+  @include size(43px, 40px);
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 35px;
+  margin-top: 5px;
+}
+
+.contacts-bottom__icon {
+  // Пока не требуется
+}
+
+.contacts-bottom__content {
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.contacts-bottom__link {
+  // Пока не требуется
+}

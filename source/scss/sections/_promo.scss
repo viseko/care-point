@@ -1,0 +1,39 @@
+.promo {
+  @include webp-bg("../img/bg/bg-promo-desktop.jpg");
+
+  min-height: 640px;
+
+  background-size: cover;
+}
+
+.promo__content {
+  max-width: 650px;
+  padding: 0 20px;
+
+  text-align: center;
+}
+
+.promo__intro {
+  margin: 0;
+  padding-top: 165px;
+  margin-bottom: 20px;
+
+  color: #474747;
+  font-family: "Montserrat", "Arial Black", sans-serif;
+  font-size: 47.69px;
+  line-height: normal;
+}
+
+.promo__sub-text {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0 60px;
+
+  color: #3f3f3f;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.promo__link {
+  // Пока не требуется
+}

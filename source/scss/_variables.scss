@@ -1,9 +1,11 @@
 // Breakpoints
+$tablet-width: 1000px;
 
 // Color pallete
 $cl-white: #fff;
 $cl-blue: #1a9bdc;
 $cl-lightgray: #6c6c6c;
+$cl-text: #6a6a6a;
 $cl-darkgray: #474747;
 $cl-black: #191919;
 
@@ -13,8 +15,7 @@ $retina-dppx: 1.5dppx;
 
 // General document variables
 $g-bg-color: $cl-white;
-$g-text-color: #6a6a6a;
+$g-text-color: $cl-text;
 $g-font: "OpenSans", "Arial", sans-serif;
 $g-font-size: 16px;
 $g-line-height: 30px;
-
