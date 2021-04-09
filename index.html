@@ -4,21 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Meta data -->
+  <!-- meta data -->
   <title>Care Point</title>
   <meta name="description" content="Адаптивная вёрстка учебного макета сайта клиники CarePoint">
-  <!-- Styles -->
+  <!-- styles -->
   <link rel="stylesheet" href="css/style.min.css">
-  <!-- Favicons -->
+  <!-- favicons -->
   <link rel="icon" href="favicon.svg">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <!-- check js enabled -->
   <script>
-    let nojs = document.querySelector('.js-nojs');
+    (function () {let nojs = document.querySelector('.js-nojs');
 
     if (nojs) {
       nojs.removeAttribute('class');
-    }
+    }})();
   </script>
 </head>
 <body>
@@ -27,12 +27,12 @@
     <div class="wrapper">
       <div class="page-header__top">
         <!-- logo -->
-        <span class="logo page-header__logo">
+        <span class="page-header__logo">
           <img src="img/logo.svg" alt="CarePoint logo" width="210" height="42">
         </span>
         <!-- contacts -->
         <ul class="page-header__contacts contacts-top">
-          <li class="contacts-top__item">
+          <li class="contacts-top__item contacts-top__item--time">
             <div class="contacts-top__icon-wrapper">
               <svg class="contacts-top__icon" width="27" height="27">
                 <use xlink:href="img/sprite.svg#clock"></use>
@@ -47,15 +47,14 @@
               </p>
             </div>
           </li>
-
-          <li class="contacts-top__item">
+          <li class="contacts-top__item contacts-top__item--mail">
             <div class="contacts-top__icon-wrapper">
               <svg class="contacts-top__icon" width="24" height="19">
                 <use xlink:href="img/sprite.svg#mail"></use>
               </svg>
             </div>
             <div class="contacts-top__text">
-              <p class="contacts-top__first-line">
+              <p class="contacts-top__first-line contacts-top__first-line--hideable">
                 Mail us
               </p>
               <p class="contacts-top__bottom-line">
@@ -63,15 +62,14 @@
               </p>
             </div>
           </li>
-
-          <li class="contacts-top__item">
+          <li class="contacts-top__item contacts-top__item--phone">
             <div class="contacts-top__icon-wrapper">
               <svg class="contacts-top__icon" width="18" height="30">
                 <use xlink:href="img/sprite.svg#phone"></use>
               </svg>
             </div>
             <div class="contacts-top__text">
-              <p class="contacts-top__first-line">
+              <p class="contacts-top__first-line contacts-top__first-line--hideable">
                 Call us
               </p>
               <p class="contacts-top__bottom-line">
@@ -93,7 +91,7 @@
         <!-- site-navigation -->
         <ul class="main-nav__site-navigation main-site-links">
           <li class="main-site-links__item">
-            <a href="#" class="main-site-links__link main-site-links__link--active">Home</a>
+            <span class="main-site-links__link main-site-links__link--active">Home</span>
           </li>
           <li class="main-site-links__item">
             <a href="#" class="main-site-links__link">About</a>
@@ -113,7 +111,7 @@
           <li class="social-links__item">
             <a href="#" class="social-links__link">
               <span class="visually-hidden">Facebook</span>
-              <svg class="social-links__icon" width="13" height="22" fill="currentColor">
+              <svg class="social-links__icon social-links__icon--facebook" width="31" height="18" fill="currentColor">
                 <use xlink:href="img/sprite.svg#facebook"></use>
               </svg>
             </a>
@@ -121,7 +119,7 @@
           <li class="social-links__item">
             <a href="#" class="social-links__link">
               <span class="visually-hidden">Google Plus</span>
-              <svg class="social-links__icon" width="31" height="20" fill="currentColor">
+              <svg class="social-links__icon" width="31" height="22" fill="currentColor">
                 <use xlink:href="img/sprite.svg#google-plus"></use>
               </svg>
             </a>
@@ -129,7 +127,7 @@
           <li class="social-links__item">
             <a href="#" class="social-links__link">
               <span class="visually-hidden">VK</span>
-              <svg class="social-links__icon" width="26" height="16" fill="currentColor">
+              <svg class="social-links__icon" width="31" height="22" fill="currentColor">
                 <use xlink:href="img/sprite.svg#vk"></use>
               </svg>
             </a>
@@ -137,7 +135,7 @@
           <li class="social-links__item">
             <a href="#" class="social-links__link">
               <span class="visually-hidden">YuouTube</span>
-              <svg class="social-links__icon" width="20" height="24" fill="currentColor">
+              <svg class="social-links__icon" width="31" height="22" fill="currentColor">
                 <use xlink:href="img/sprite.svg#youtube"></use>
               </svg>
             </a>
@@ -145,7 +143,7 @@
           <li class="social-links__item">
             <a href="#" class="social-links__link">
               <span class="visually-hidden">Linkedin</span>
-              <svg class="social-links__icon" width="21" height="20" fill="currentColor">
+              <svg class="social-links__icon" width="31" height="22" fill="currentColor">
                 <use xlink:href="img/sprite.svg#linkedin"></use>
               </svg>
             </a>
@@ -182,51 +180,51 @@
             <svg class="" width="45" height="50">
               <use xlink:href="img/sprite.svg#treatment"></use>
             </svg>
-            <h3 class="service__title">Best Treatment</h3>
-            <p class="service__description">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-            </p>
           </div>
+          <h3 class="service__title">Best Treatment</h3>
+          <p class="service__description">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+          </p>
         </li>
         <li class="service__item service__item--emergency">
           <div class="service__icon-wrapper">
             <svg class="" width="51" height="46">
               <use xlink:href="img/sprite.svg#emergency"></use>
             </svg>
-            <h3 class="service__title">Emergency Help</h3>
-            <p class="service__description">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-            </p>
           </div>
+          <h3 class="service__title">Emergency Help</h3>
+          <p class="service__description">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+          </p>
         </li>
         <li class="service__item service__item--staff">
           <div class="service__icon-wrapper">
             <svg class="" width="31" height="54">
               <use xlink:href="img/sprite.svg#staff"></use>
             </svg>
-            <h3 class="service__title">Medical Staff</h3>
-            <p class="service__description">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-            </p>
           </div>
+          <h3 class="service__title">Medical Staff</h3>
+          <p class="service__description">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+          </p>
         </li>
         <li class="service__item service__item--quality">
           <div class="service__icon-wrapper">
             <svg class="" width="44" height="42">
               <use xlink:href="img/sprite.svg#ambulance"></use>
             </svg>
-            <h3 class="service__title">Qualified Doctors</h3>
-            <p class="service__description">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-            </p>
           </div>
+          <h3 class="service__title">Qualified Doctors</h3>
+          <p class="service__description">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+          </p>
         </li>
       </ul>
     </section>
     <!-- advantages -->
     <section class="advantages">
       <div class="wrapper advantages__wrapper">
-        <h2 class="section-title advantages__title">Why Choose Us?</h2>
+        <h2 class="section-title advantages__title">Why Choose Us ?</h2>
         <p class="section-intro advantages__intro">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
         </p>
@@ -301,7 +299,7 @@
             <p class="stats__text">Happy Customers</p>
           </li>
           <li class="stats__item">
-            <div class="stats__icon-wrapper">
+            <div class="stats__icon-wrapper stats__icon-wrapper--top">
               <svg class="stats__icon" width="80" height="71">
                 <use xlink:href="img/sprite.svg#heart"></use>
               </svg>
@@ -310,7 +308,7 @@
             <p class="stats__text">Top Hospitaly</p>
           </li>
           <li class="stats__item">
-            <div class="stats__icon-wrapper">
+            <div class="stats__icon-wrapper stats__icon-wrapper--innovative">
               <svg class="stats__icon" width="80" height="71">
                 <use xlink:href="img/sprite.svg#chopper"></use>
               </svg>
@@ -319,7 +317,7 @@
             <p class="stats__text">Innovative Approach</p>
           </li>
           <li class="stats__item">
-            <div class="stats__icon-wrapper">
+            <div class="stats__icon-wrapper stats__icon-wrapper--lung">
               <svg class="stats__icon" width="91" height="73">
                 <use xlink:href="img/sprite.svg#lung"></use>
               </svg>
@@ -405,13 +403,19 @@
               Sed ut perspiciatis unde omnis iste natus error s.it voluptatem accusantium doloremque laudantium.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
             </p>
           </details>
+          <details class="accordeon__item">
+            <summary class="accordeon__title">Heart Treatment</summary>
+            <p class="accordeon__content">
+              Sed ut perspiciatis unde omnis iste natus error s.it voluptatem accusantium doloremque laudantium.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+            </p>
+          </details>
         </div>
       </section>
     </div>
     <!-- gallery -->
     <section class="gallery">
       <div class="wrapper">
-        <h2 class="section-title">Gallery</h2>
+        <h2 class="section-title gallery__title">Gallery</h2>
         <p class="section-intro gallery__intro">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
         </p>
@@ -462,8 +466,8 @@
         <p class="section-intro team__intro">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
         </p>
-        <div class="team__list team-list">
-          <article class="team-list_item team-person">
+        <div class="team__list">
+          <article class="team__person team-person">
             <figure class="team-person__photo-wrapper">
               <picture>
                 <source srcset="img/team/team-1.webp" type="image/webp">
@@ -476,7 +480,7 @@
               <li class="social-links__item">
                 <a href="#" class="social-links__link">
                   <span class="visually-hidden">Facebook</span>
-                  <svg class="social-links__icon" width="13" height="22" fill="currentColor">
+                  <svg class="social-links__icon" width="31" height="18" fill="currentColor">
                     <use xlink:href="img/sprite.svg#facebook"></use>
                   </svg>
                 </a>
@@ -484,7 +488,7 @@
               <li class="social-links__item">
                 <a href="#" class="social-links__link">
                   <span class="visually-hidden">Google Plus</span>
-                  <svg class="social-links__icon" width="31" height="20" fill="currentColor">
+                  <svg class="social-links__icon" width="31" height="22" fill="currentColor">
                     <use xlink:href="img/sprite.svg#google-plus"></use>
                   </svg>
                 </a>
@@ -492,14 +496,14 @@
               <li class="social-links__item">
                 <a href="#" class="social-links__link">
                   <span class="visually-hidden">VK</span>
-                  <svg class="social-links__icon" width="26" height="16" fill="currentColor">
+                  <svg class="social-links__icon" width="31" height="22" fill="currentColor">
                     <use xlink:href="img/sprite.svg#vk"></use>
                   </svg>
                 </a>
               </li>
             </ul>
           </article>
-          <article class="team-list_item team-person">
+          <article class="team__person team-person">
             <figure class="team-person__photo-wrapper">
               <picture>
                 <source srcset="img/team/team-2.webp" type="image/webp">
@@ -512,7 +516,7 @@
               <li class="social-links__item">
                 <a href="#" class="social-links__link">
                   <span class="visually-hidden">Facebook</span>
-                  <svg class="social-links__icon" width="13" height="22" fill="currentColor">
+                  <svg class="social-links__icon" width="31" height="18" fill="currentColor">
                     <use xlink:href="img/sprite.svg#facebook"></use>
                   </svg>
                 </a>
@@ -520,7 +524,7 @@
               <li class="social-links__item">
                 <a href="#" class="social-links__link">
                   <span class="visually-hidden">Google Plus</span>
-                  <svg class="social-links__icon" width="31" height="20" fill="currentColor">
+                  <svg class="social-links__icon" width="31" height="22" fill="currentColor">
                     <use xlink:href="img/sprite.svg#google-plus"></use>
                   </svg>
                 </a>
@@ -528,14 +532,14 @@
               <li class="social-links__item">
                 <a href="#" class="social-links__link">
                   <span class="visually-hidden">VK</span>
-                  <svg class="social-links__icon" width="26" height="16" fill="currentColor">
+                  <svg class="social-links__icon" width="31" height="22" fill="currentColor">
                     <use xlink:href="img/sprite.svg#vk"></use>
                   </svg>
                 </a>
               </li>
             </ul>
           </article>
-          <article class="team-list_item team-person">
+          <article class="team__person team-person">
             <figure class="team-person__photo-wrapper">
               <picture>
                 <source srcset="img/team/team-3.webp" type="image/webp">
@@ -548,7 +552,7 @@
               <li class="social-links__item">
                 <a href="#" class="social-links__link">
                   <span class="visually-hidden">Facebook</span>
-                  <svg class="social-links__icon" width="13" height="22" fill="currentColor">
+                  <svg class="social-links__icon" width="31" height="18" fill="currentColor">
                     <use xlink:href="img/sprite.svg#facebook"></use>
                   </svg>
                 </a>
@@ -556,7 +560,7 @@
               <li class="social-links__item">
                 <a href="#" class="social-links__link">
                   <span class="visually-hidden">Google Plus</span>
-                  <svg class="social-links__icon" width="31" height="20" fill="currentColor">
+                  <svg class="social-links__icon" width="31" height="22" fill="currentColor">
                     <use xlink:href="img/sprite.svg#google-plus"></use>
                   </svg>
                 </a>
@@ -564,14 +568,14 @@
               <li class="social-links__item">
                 <a href="#" class="social-links__link">
                   <span class="visually-hidden">VK</span>
-                  <svg class="social-links__icon" width="26" height="16" fill="currentColor">
+                  <svg class="social-links__icon" width="31" height="22" fill="currentColor">
                     <use xlink:href="img/sprite.svg#vk"></use>
                   </svg>
                 </a>
               </li>
             </ul>
           </article>
-          <article class="team-list_item team-person">
+          <article class="team__person team-person">
             <figure class="team-person__photo-wrapper">
               <picture>
                 <source srcset="img/team/team-4.webp" type="image/webp">
@@ -584,7 +588,7 @@
               <li class="social-links__item">
                 <a href="#" class="social-links__link">
                   <span class="visually-hidden">Facebook</span>
-                  <svg class="social-links__icon" width="13" height="22" fill="currentColor">
+                  <svg class="social-links__icon" width="31" height="18" fill="currentColor">
                     <use xlink:href="img/sprite.svg#facebook"></use>
                   </svg>
                 </a>
@@ -592,7 +596,7 @@
               <li class="social-links__item">
                 <a href="#" class="social-links__link">
                   <span class="visually-hidden">Google Plus</span>
-                  <svg class="social-links__icon" width="31" height="20" fill="currentColor">
+                  <svg class="social-links__icon" width="31" height="22" fill="currentColor">
                     <use xlink:href="img/sprite.svg#google-plus"></use>
                   </svg>
                 </a>
@@ -600,7 +604,7 @@
               <li class="social-links__item">
                 <a href="#" class="social-links__link">
                   <span class="visually-hidden">VK</span>
-                  <svg class="social-links__icon" width="26" height="16" fill="currentColor">
+                  <svg class="social-links__icon" width="31" height="22" fill="currentColor">
                     <use xlink:href="img/sprite.svg#vk"></use>
                   </svg>
                 </a>
@@ -660,11 +664,11 @@
             </p>
           </li>
         </ul>
-        <ul class="page-footer__social-links social-links">
+        <ul class="social-links page-footer__social-links">
           <li class="social-links__item">
             <a href="#" class="social-links__link">
               <span class="visually-hidden">Facebook</span>
-              <svg class="social-links__icon" width="13" height="22" fill="currentColor">
+              <svg class="social-links__icon social-links__icon--facebook" width="31" height="18" fill="currentColor">
                 <use xlink:href="img/sprite.svg#facebook"></use>
               </svg>
             </a>
@@ -672,7 +676,7 @@
           <li class="social-links__item">
             <a href="#" class="social-links__link">
               <span class="visually-hidden">Google Plus</span>
-              <svg class="social-links__icon" width="31" height="20" fill="currentColor">
+              <svg class="social-links__icon" width="31" height="22" fill="currentColor">
                 <use xlink:href="img/sprite.svg#google-plus"></use>
               </svg>
             </a>
@@ -680,7 +684,7 @@
           <li class="social-links__item">
             <a href="#" class="social-links__link">
               <span class="visually-hidden">VK</span>
-              <svg class="social-links__icon" width="26" height="16" fill="currentColor">
+              <svg class="social-links__icon" width="31" height="22" fill="currentColor">
                 <use xlink:href="img/sprite.svg#vk"></use>
               </svg>
             </a>
@@ -688,7 +692,7 @@
           <li class="social-links__item">
             <a href="#" class="social-links__link">
               <span class="visually-hidden">YuouTube</span>
-              <svg class="social-links__icon" width="20" height="24" fill="currentColor">
+              <svg class="social-links__icon" width="31" height="22" fill="currentColor">
                 <use xlink:href="img/sprite.svg#youtube"></use>
               </svg>
             </a>
@@ -696,7 +700,7 @@
           <li class="social-links__item">
             <a href="#" class="social-links__link">
               <span class="visually-hidden">Linkedin</span>
-              <svg class="social-links__icon" width="21" height="20" fill="currentColor">
+              <svg class="social-links__icon" width="31" height="22" fill="currentColor">
                 <use xlink:href="img/sprite.svg#linkedin"></use>
               </svg>
             </a>
@@ -754,10 +758,10 @@
       <!-- form -->
       <div class="page-footer__form-wrapper">
         <h2 class="page-footer__title">Enquiry Form</h2>
-        <form class="page-footer__form footer-form" action="https://echo.htmlacademy.ru" method="POST">
-          <input class="footer-form__text-input" type="text" name="name" id="form-username" placeholder="Name" required>
-          <input class="footer-form__text-input" type="tel" name="phone" id="form-phone" placeholder="Phone" required>
-          <textarea class="footer-form__text-input" name="message" id="form-message" cols="30" rows="10" placeholder="Message"></textarea>
+        <form class="page-footer__form footer-form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
+          <input class="footer-form__text-input" type="text" name="name" id="form-username" placeholder="Name" autocomplete="off" required>
+          <input class="footer-form__text-input" type="tel" name="phone" id="form-phone" placeholder="Phone" autocomplete="off" required>
+          <textarea class="footer-form__text-input" name="message" id="form-message" cols="30" rows="10" placeholder="Message" autocomplete="off"></textarea>
           <input class="btn" type="submit" value="Submit">
         </form>
       </div>
