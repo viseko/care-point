@@ -9,13 +9,36 @@
   font-size: 20px;
 }
 
-.main-site-links__item:not(:last-child) {
+.main-site-links__item {
   margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .main-site-links__link {
+  // Пока не требуется
 }
 
 .main-site-links__link--active {
   color: $cl-black;
+}
+
+
+@media (max-width: $tablet-width) {
+  .main-site-links {
+    align-items: center;
+
+    font-size: 24px;
+  }
+
+  .main-site-links__item {
+    margin-right: 0;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

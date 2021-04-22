@@ -127,3 +127,13 @@
     background-image: url("#{$trim-url}.webp");
   }
 }
+
+@mixin webp-bg-clean {
+  .no-webp & {
+    background-image: none;
+  }
+
+  .webp & {
+    background-image: none;
+  }
+}

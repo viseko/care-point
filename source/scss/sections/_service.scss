@@ -62,3 +62,25 @@
 .service__item--quality {
   background-color: #37c3a8;
 }
+
+@media (max-width: $desktop-width-mid) {
+  .service__list {
+    flex-wrap: wrap;
+  }
+
+  .service__item {
+    width: 50%;
+    padding: 55px 20px 35px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .service__item {
+    width: 100%;
+  }
+
+  .service__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+}

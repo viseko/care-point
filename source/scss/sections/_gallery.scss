@@ -25,7 +25,8 @@
 }
 
 .gallery__photo {
-  @include size(344px, 209px);
+  width: calc(33.33% - 20px);
+  max-height: 209px;
 
   display: block;
   margin-top: 40px;
@@ -33,10 +34,53 @@
 
   img {
     display: block;
+    width: 100%;
     transition: 0.2s linear;
+    object-fit: cover;
   }
 
   &:hover img {
     transform: scale(1.02);
+  }
+}
+
+@media (max-width: $desktop-width-min) {
+  .gallery__photo {
+    width: calc(50% - 20px);
+    max-height: 300px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .gallery__intro {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  .gallery__list {
+    padding: 0;
+  }
+
+  .gallery__photo {
+    width: calc(50% - 5px);
+    max-height: 300px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .gallery {
+    padding: 50px 0;
+  }
+
+  .gallery__list {
+    justify-content: center;
+  }
+
+  .gallery__photo {
+    width: 100%;
+    max-width: 350px;
+    max-height: 300px;
+    margin-top: 10px;
   }
 }

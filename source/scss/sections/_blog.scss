@@ -1,5 +1,4 @@
 .blog {
-  flex-grow: 1;
   margin-right: 50px;
 }
 
@@ -29,4 +28,39 @@
   display: block;
   width: 160px;
   margin: auto;
+}
+
+@media (max-width: $desktop-width-min) {
+  .blog {
+    margin-right: 0;
+    margin-bottom: 100px;
+  }
+
+  .blog__title {
+    text-align: center;
+  }
+
+  .blog__intro {
+    text-align: center;
+    padding: 0 10%;
+  }
+}
+
+@media (max-width: 600px) {
+  .blog__entries {
+    margin-bottom: 0;
+  }
+
+  .blog__entry {
+    width: 100%;
+    margin-bottom: 40px;
+
+    &:nth-child(odd) {
+      padding-right: 0;
+    }
+
+    &:nth-child(even) {
+      padding-left: 0;
+    }
+  }
 }

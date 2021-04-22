@@ -20,3 +20,15 @@
   width: 280px;
   margin-top: 40px;
 }
+
+@media (max-width: $tablet-width) {
+  .team {
+    padding: 100px 0;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .team {
+    padding: 60px 0;
+  }
+}

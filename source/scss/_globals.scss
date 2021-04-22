@@ -21,11 +21,14 @@ html {
 }
 
 body {
-  background-color: $g-bg-color;
+  min-height: 320px;
+
   color: $g-text-color;
   font-family: $g-font;
   font-size: $g-font-size;
   line-height: $g-line-height;
+
+  background-color: $g-bg-color;
 }
 
 img {

@@ -1,11 +1,27 @@
 .treatment {
-  flex-shrink: 0;
-  width: 425px;
+  flex: 1 0 425px;
 }
 
 .treatment__intro {
   margin-bottom: 50px;
 }
 
-.treatment__details {
+@media (max-width: $desktop-width-min) {
+  .treatment__title {
+    text-align: center;
+  }
+
+  .treatment__intro {
+    text-align: center;
+    padding: 0 10%;
+  }
+
+  .treatment__details {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .treatment__details-item {
+    width: 100%;
+  }
 }

@@ -5,6 +5,7 @@
 .accordeon__item {
   margin-bottom: 12px;
 
+  &._open .accordeon__title,
   &[open] .accordeon__title {
     background-color: $cl-blue;
 
@@ -27,6 +28,11 @@
   border-radius: 40px;
 
   cursor: pointer;
+  transition: 0.3s;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
 
   &::before {
     content: "";
@@ -46,5 +52,9 @@
 }
 
 .accordeon__content {
-  // Пока не требуется
+  margin: 0;
+
+  transition: 0.3s;
+  overflow: hidden;
+  box-sizing: border-box;
 }

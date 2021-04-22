@@ -2,7 +2,8 @@
   @include reset-list;
 
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 
   font-size: 15px;
   line-height: 22px;
@@ -11,16 +12,17 @@
 .contacts-top__item {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
 
-  &:not(:nth-child(3n + 3)) {
-    margin-right: 10px;
+  &--time,
+  &--mail {
+    margin-right: 20px;
   }
 }
 
 .contacts-top__icon-wrapper {
   @include size(50px);
 
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,10 +32,6 @@
 
   background-color: $cl-blue;
   border-radius: 50%;
-}
-
-.contacts-top__icon {
-  // Пока не требуется
 }
 
 .contacts-top__text {
@@ -53,4 +51,53 @@
 }
 
 .contacts-top__link {
+  // Не требуется
+}
+
+// Desktop min breakpoint
+
+@media (max-width: $desktop-width-min) {
+  .contacts-top {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-end;
+
+    height: 50px;
+  }
+
+  .contacts-top__item {
+    margin-bottom: 0;
+  }
+
+  .contacts-top__item--phone .contacts-top__first-line,
+  .contacts-top__item--mail .contacts-top__first-line {
+    display: none;
+  }
+
+  .contacts-top__item--time {
+    order: 3;
+    margin-right: 0;
+    margin-left: 30px;
+  }
+
+  .contacts-top__item--mail svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .contacts-top__item--phone svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .contacts-top__icon-wrapper {
+    @include size(auto);
+
+    background-color: unset;
+  }
+
+  .contacts-top__icon {
+    color: $cl-blue;
+  }
 }

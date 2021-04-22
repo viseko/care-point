@@ -19,17 +19,17 @@
 }
 
 .blog-entry__image-wrapper {
-  @include size(335px, 210px);
-
   margin: 0;
   margin-bottom: 35px;
   overflow: hidden;
-
-  background-color: $cl-lightgray;
 }
 
 .blog-entry__image {
+  display: block;
   transition: 0.5s linear;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 
 .blog-entry__title {
@@ -63,4 +63,17 @@
   margin: 0;
 
   color: #6a6a6a;
+}
+
+@media (max-width: 600px) {
+  .blog-entry__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .blog-entry__image-wrapper {
+    max-width: 350px;
+  }
 }
