@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="js-nojs" lang="en">
+<html class="no-js no-webp" lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,14 +14,39 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <!-- check js enabled -->
   <script>
-    (function () {let nojs = document.querySelector('html.js-nojs');
+    let nojs = document.querySelector('html.no-js');
 
     if (nojs) {
-      nojs.classList.remove('class');
-    }})();
+      nojs.classList.remove('no-js');
+    }
   </script>
+  <!-- check webp supporting -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      testWebP(document.querySelector('html.no-webp'))
+    });
+
+    function testWebP(elem) {
+      const webP = new Image();
+      webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+      webP.onload = webP.onerror = function () {
+        if (webP.height === 2) {
+          elem.classList.remove('no-webp');
+          elem.classList.add('webp');
+        }
+      }
+    }
+  </script>
+  <!-- swiper -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
+  <noscript>
+    <p class="noscript">
+      JavaScript is disabled in your browser. Some site functionality may not work as intended.<br>
+      <a class="noscript__link" href="https://enable-javascript.com/">How to enable JavaScript?</a>
+    </p>
+  </noscript>
   <!-- page-header -->
   <header class="page-header">
     <div class="wrapper">
@@ -476,152 +501,167 @@
         <p class="section-intro team__intro">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
         </p>
-        <div class="team__list">
-          <article class="team__person team-person">
-            <figure class="team-person__photo-wrapper">
-              <picture>
-                <source srcset="img/team/team-1.webp" type="image/webp">
-                <img class="team-person__photo" src="img/team/team-1.jpg" alt="Dr Ricky Doe" width="279" height="279">
-              </picture>
-            </figure>
-            <h3 class="team-person__name">Dr Ricky Doe</h3>
-            <p class="team-person__rank">Assisstant Surgeon</p>
-            <ul class="social-links team-person__contacts">
-              <li class="social-links__item">
-                <a href="#" class="social-links__link">
-                  <span class="visually-hidden">Facebook</span>
-                  <svg class="social-links__icon" width="31" height="18" fill="currentColor">
-                    <use xlink:href="img/sprite.svg#facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-links__item">
-                <a href="#" class="social-links__link">
-                  <span class="visually-hidden">Google Plus</span>
-                  <svg class="social-links__icon" width="31" height="22" fill="currentColor">
-                    <use xlink:href="img/sprite.svg#google-plus"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-links__item">
-                <a href="#" class="social-links__link">
-                  <span class="visually-hidden">VK</span>
-                  <svg class="social-links__icon" width="31" height="22" fill="currentColor">
-                    <use xlink:href="img/sprite.svg#vk"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </article>
-          <article class="team__person team-person">
-            <figure class="team-person__photo-wrapper">
-              <picture>
-                <source srcset="img/team/team-2.webp" type="image/webp">
-                <img class="team-person__photo" src="img/team/team-2.jpg" alt="Dr Ricky Doe" width="279" height="279">
-              </picture>
-            </figure>
-            <h3 class="team-person__name">Dr Ricky Doe</h3>
-            <p class="team-person__rank">Assisstant Surgeon</p>
-            <ul class="social-links team-person__contacts">
-              <li class="social-links__item">
-                <a href="#" class="social-links__link">
-                  <span class="visually-hidden">Facebook</span>
-                  <svg class="social-links__icon" width="31" height="18" fill="currentColor">
-                    <use xlink:href="img/sprite.svg#facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-links__item">
-                <a href="#" class="social-links__link">
-                  <span class="visually-hidden">Google Plus</span>
-                  <svg class="social-links__icon" width="31" height="22" fill="currentColor">
-                    <use xlink:href="img/sprite.svg#google-plus"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-links__item">
-                <a href="#" class="social-links__link">
-                  <span class="visually-hidden">VK</span>
-                  <svg class="social-links__icon" width="31" height="22" fill="currentColor">
-                    <use xlink:href="img/sprite.svg#vk"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </article>
-          <article class="team__person team-person">
-            <figure class="team-person__photo-wrapper">
-              <picture>
-                <source srcset="img/team/team-3.webp" type="image/webp">
-                <img class="team-person__photo" src="img/team/team-3.jpg" alt="Dr Ricky Doe" width="279" height="279">
-              </picture>
-            </figure>
-            <h3 class="team-person__name">Dr Ricky Doe</h3>
-            <p class="team-person__rank">Assisstant Surgeon</p>
-            <ul class="social-links team-person__contacts">
-              <li class="social-links__item">
-                <a href="#" class="social-links__link">
-                  <span class="visually-hidden">Facebook</span>
-                  <svg class="social-links__icon" width="31" height="18" fill="currentColor">
-                    <use xlink:href="img/sprite.svg#facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-links__item">
-                <a href="#" class="social-links__link">
-                  <span class="visually-hidden">Google Plus</span>
-                  <svg class="social-links__icon" width="31" height="22" fill="currentColor">
-                    <use xlink:href="img/sprite.svg#google-plus"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-links__item">
-                <a href="#" class="social-links__link">
-                  <span class="visually-hidden">VK</span>
-                  <svg class="social-links__icon" width="31" height="22" fill="currentColor">
-                    <use xlink:href="img/sprite.svg#vk"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </article>
-          <article class="team__person team-person">
-            <figure class="team-person__photo-wrapper">
-              <picture>
-                <source srcset="img/team/team-4.webp" type="image/webp">
-                <img class="team-person__photo" src="img/team/team-4.jpg" alt="Dr Ricky Doe" width="279" height="279">
-              </picture>
-            </figure>
-            <h3 class="team-person__name">Dr Ricky Doe</h3>
-            <p class="team-person__rank">Assisstant Surgeon</p>
-            <ul class="social-links team-person__contacts">
-              <li class="social-links__item">
-                <a href="#" class="social-links__link">
-                  <span class="visually-hidden">Facebook</span>
-                  <svg class="social-links__icon" width="31" height="18" fill="currentColor">
-                    <use xlink:href="img/sprite.svg#facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-links__item">
-                <a href="#" class="social-links__link">
-                  <span class="visually-hidden">Google Plus</span>
-                  <svg class="social-links__icon" width="31" height="22" fill="currentColor">
-                    <use xlink:href="img/sprite.svg#google-plus"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-links__item">
-                <a href="#" class="social-links__link">
-                  <span class="visually-hidden">VK</span>
-                  <svg class="social-links__icon" width="31" height="22" fill="currentColor">
-                    <use xlink:href="img/sprite.svg#vk"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </article>
+      </div>
+      <div class="team__slider slider">
+        <div class="slider__wrapper js-team-slider">
+          <div class="team__list slider__slides js-team-list">
+            <article class="team__person team-person js-team-slide">
+              <figure class="team-person__photo-wrapper">
+                <picture>
+                  <source srcset="img/team/team-1.webp" type="image/webp">
+                  <img class="team-person__photo" src="img/team/team-1.jpg" alt="Dr Ricky Doe" width="279" height="279">
+                </picture>
+              </figure>
+              <h3 class="team-person__name">Dr Ricky Doe</h3>
+              <p class="team-person__rank">Assisstant Surgeon</p>
+              <ul class="social-links team-person__contacts">
+                <li class="social-links__item">
+                  <a href="#" class="social-links__link">
+                    <span class="visually-hidden">Facebook</span>
+                    <svg class="social-links__icon" width="31" height="18" fill="currentColor">
+                      <use xlink:href="img/sprite.svg#facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-links__item">
+                  <a href="#" class="social-links__link">
+                    <span class="visually-hidden">Google Plus</span>
+                    <svg class="social-links__icon" width="31" height="22" fill="currentColor">
+                      <use xlink:href="img/sprite.svg#google-plus"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-links__item">
+                  <a href="#" class="social-links__link">
+                    <span class="visually-hidden">VK</span>
+                    <svg class="social-links__icon" width="31" height="22" fill="currentColor">
+                      <use xlink:href="img/sprite.svg#vk"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </article>
+            <article class="team__person team-person js-team-slide">
+              <figure class="team-person__photo-wrapper">
+                <picture>
+                  <source srcset="img/team/team-2.webp" type="image/webp">
+                  <img class="team-person__photo" src="img/team/team-2.jpg" alt="Dr Ricky Doe" width="279" height="279">
+                </picture>
+              </figure>
+              <h3 class="team-person__name">Dr Ricky Doe</h3>
+              <p class="team-person__rank">Assisstant Surgeon</p>
+              <ul class="social-links team-person__contacts">
+                <li class="social-links__item">
+                  <a href="#" class="social-links__link">
+                    <span class="visually-hidden">Facebook</span>
+                    <svg class="social-links__icon" width="31" height="18" fill="currentColor">
+                      <use xlink:href="img/sprite.svg#facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-links__item">
+                  <a href="#" class="social-links__link">
+                    <span class="visually-hidden">Google Plus</span>
+                    <svg class="social-links__icon" width="31" height="22" fill="currentColor">
+                      <use xlink:href="img/sprite.svg#google-plus"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-links__item">
+                  <a href="#" class="social-links__link">
+                    <span class="visually-hidden">VK</span>
+                    <svg class="social-links__icon" width="31" height="22" fill="currentColor">
+                      <use xlink:href="img/sprite.svg#vk"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </article>
+            <article class="team__person team-person js-team-slide">
+              <figure class="team-person__photo-wrapper">
+                <picture>
+                  <source srcset="img/team/team-3.webp" type="image/webp">
+                  <img class="team-person__photo" src="img/team/team-3.jpg" alt="Dr Ricky Doe" width="279" height="279">
+                </picture>
+              </figure>
+              <h3 class="team-person__name">Dr Ricky Doe</h3>
+              <p class="team-person__rank">Assisstant Surgeon</p>
+              <ul class="social-links team-person__contacts">
+                <li class="social-links__item">
+                  <a href="#" class="social-links__link">
+                    <span class="visually-hidden">Facebook</span>
+                    <svg class="social-links__icon" width="31" height="18" fill="currentColor">
+                      <use xlink:href="img/sprite.svg#facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-links__item">
+                  <a href="#" class="social-links__link">
+                    <span class="visually-hidden">Google Plus</span>
+                    <svg class="social-links__icon" width="31" height="22" fill="currentColor">
+                      <use xlink:href="img/sprite.svg#google-plus"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-links__item">
+                  <a href="#" class="social-links__link">
+                    <span class="visually-hidden">VK</span>
+                    <svg class="social-links__icon" width="31" height="22" fill="currentColor">
+                      <use xlink:href="img/sprite.svg#vk"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </article>
+            <article class="team__person team-person js-team-slide">
+              <figure class="team-person__photo-wrapper">
+                <picture>
+                  <source srcset="img/team/team-4.webp" type="image/webp">
+                  <img class="team-person__photo" src="img/team/team-4.jpg" alt="Dr Ricky Doe" width="279" height="279">
+                </picture>
+              </figure>
+              <h3 class="team-person__name">Dr Ricky Doe</h3>
+              <p class="team-person__rank">Assisstant Surgeon</p>
+              <ul class="social-links team-person__contacts">
+                <li class="social-links__item">
+                  <a href="#" class="social-links__link">
+                    <span class="visually-hidden">Facebook</span>
+                    <svg class="social-links__icon" width="31" height="18" fill="currentColor">
+                      <use xlink:href="img/sprite.svg#facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-links__item">
+                  <a href="#" class="social-links__link">
+                    <span class="visually-hidden">Google Plus</span>
+                    <svg class="social-links__icon" width="31" height="22" fill="currentColor">
+                      <use xlink:href="img/sprite.svg#google-plus"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-links__item">
+                  <a href="#" class="social-links__link">
+                    <span class="visually-hidden">VK</span>
+                    <svg class="social-links__icon" width="31" height="22" fill="currentColor">
+                      <use xlink:href="img/sprite.svg#vk"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </article>
+          </div>
         </div>
+        <button class="slider__nav slider__nav--prev js-team-prev" aria-label="previous slide">
+          <svg class="slider__nav-icon" width="23" height="30">
+            <use xlink:href="img/sprite.svg#arrow-left"></use>
+          </svg>
+        </button>
+        <button class="slider__nav slider__nav--next js-team-next" aria-label="next slide">
+          <svg class="slider__nav-icon" width="23" height="30">
+            <use xlink:href="img/sprite.svg#arrow-right"></use>
+          </svg>
+        </button>
+        <div class="slider__pagination js-team__pagination"></div>
       </div>
     </section>
     <!-- quick action bar -->
@@ -780,7 +820,7 @@
       Copyright © 2017. PSD.IN.UA  | Best PSD Template for freelancer and agencies
     </div>
   </footer>
-  <!-- script -->
+  <!--main script -->
   <script src="js/script.min.js"></script>
 </body>
 </html>

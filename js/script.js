@@ -1,18 +1,3 @@
-// Checking webp support
-// Взято здесь: https://gist.github.com/Protoff/d6643387f03d47b44b2d7c3cf7b3e0a0
-
-document.addEventListener('DOMContentLoaded', function() {
-  testWebP(document.body)
-})
-
-function testWebP(elem) {
-  const webP = new Image();
-  webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
-  webP.onload = webP.onerror = function () {
-    webP.height === 2 ? elem.classList.add('webp') : elem.classList.add('no-webp')
-  }
-};
-
 // Menu burger
 const  menuBtn = document.querySelector(".js-menu-btn");
 const menuActiveClass = ("menu-open");
@@ -23,6 +8,68 @@ menuBtn.addEventListener("click", function() {
 ;
 
 // Team-list swiper
+const teamSlider = new Swiper('.js-team-slider', {
+  wrapperClass: "js-team-list",
+  slideClass: "js-team-slide",
+
+  direction: "horizontal",
+  loop: false,
+  slidesPerView: "1",
+
+  pagination: {
+    el: ".js-team__pagination",
+    bulletClass: "slider__bullet",
+    bulletActiveClass: "slider__bullet--active",
+    bulletElement: "button",
+    clickable: true,
+    clickableClass: "slider__pagination__clickable"
+  },
+
+  navigation: {
+    nextEl: ".js-team-next",
+    prevEl: ".js-team-prev",
+    disabledClass: "slider__nav--disabled",
+  },
+
+  followFinger: false,
+
+  breakpoints: {
+    1000: {
+      slidesPerView: 4
+    },
+
+    750: {
+      slidesPerView: 3
+    },
+
+    600: {
+      slidesPerView: 2
+    }
+  }
+});
+
+checkSlidesLength(teamSlider, teamSlider.params);
+
+teamSlider.on("breakpoint", function(swiper, params) {
+  checkSlidesLength(swiper, params);
+});
+
+// Если количество отображаемых слайдов равно числу слайдов - фиксируем слайдер и прячем элементы управления
+function checkSlidesLength(swiper, params) {
+  const slidesPerView = params.slidesPerView;
+  const slidesLength = swiper.slides.length;
+
+  if (slidesPerView === slidesLength) {
+    swiper.params.followFinger = false;
+    swiper.$el[0].parentElement.classList.add("_slider-lock");
+  } else if (slidesPerView < slidesLength) {
+    swiper.params.followFinger = true;
+    if (swiper.$el[0].parentElement.classList.contains("_slider-lock")) {
+      swiper.$el[0].parentElement.classList.remove("_slider-lock");
+    }
+  }
+}
+;
 
 // Accordeons
 const accordeons = document.querySelectorAll(".accordeon__item");
