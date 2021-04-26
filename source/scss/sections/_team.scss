@@ -10,15 +10,19 @@
   padding: 0 35px;
 }
 
+.team__slider {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
 .team__list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .team__person {
-  width: 280px;
   margin-top: 40px;
+  flex-shrink: 0;
 }
 
 @media (max-width: $tablet-width) {

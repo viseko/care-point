@@ -4,6 +4,20 @@
   box-sizing: inherit;
 }
 
+.noscript {
+  margin: 0;
+  padding: 15px;
+
+  color: #fff;
+  text-align: center;
+
+  background-color: #f00;
+
+  &__link {
+    color: inherit;
+  }
+}
+
 /* stylelint-disable */
 .visually-hidden {
   position: absolute !important;
