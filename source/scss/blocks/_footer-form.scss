@@ -2,6 +2,8 @@
   textarea {
     height: 95px;
     resize: vertical;
+    min-height: 95px;
+    max-height: 200px;
   }
 }
 
@@ -22,5 +24,27 @@
 
     outline: none;
     border-color: $cl-white;
+  }
+}
+
+@media (max-width: $desktop-width-min) {
+  .footer-form__text-input[type="text"],
+  .footer-form__text-input[type="tel"] {
+    width: calc(50% - 5px);
+  }
+
+  .footer-form__text-input[type="text"] {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .footer-form__text-input[type="text"],
+  .footer-form__text-input[type="tel"] {
+    width: 100%;
+  }
+
+  .footer-form__text-input[type="text"] {
+    margin-right: 0;
   }
 }

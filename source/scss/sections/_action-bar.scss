@@ -18,6 +18,9 @@
 .action-bar__title {
   @include montserrat;
 
+  max-width: 100%;
+  margin-right: 40px;
+
   color: #494949;
   font-weight: bold;
   font-size: 30px;
@@ -26,3 +29,39 @@
 .action-bar__link {
   font-size: 21.18px;
 }
+
+@media (max-width: $desktop-width-mid) {
+  .action-bar__wrapper {
+    flex-direction: column;
+  }
+
+  .action-bar__title {
+    text-align: center;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .action-bar {
+    padding: 48px 0 34px;
+  }
+
+  .action-bar__title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .action-bar {
+    padding: 28px 0 24px;
+  }
+
+  .action-bar__title {
+    font-size: 18px;
+  }
+
+  .action-bar__link {
+    font-size: 16px;
+  }
+}
+

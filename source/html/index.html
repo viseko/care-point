@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="js-nojs no-webp" lang="en">
+<html class="no-js no-webp" lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,11 +14,11 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <!-- check js enabled -->
   <script>
-    (function () {let nojs = document.querySelector('html.js-nojs');
+    let nojs = document.querySelector('html.no-js');
 
     if (nojs) {
-      nojs.classList.remove('class');
-    }})();
+      nojs.classList.remove('no-js');
+    }
   </script>
   <!-- check webp supporting -->
   <script>
