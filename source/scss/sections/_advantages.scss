@@ -137,7 +137,8 @@
 
 @media (max-width: $tablet-width) {
   .advantages__wrapper {
-    @include webp-bg-clean;
+    padding-bottom: 320px;
+    background-size: 180px 320px;
   }
 
   .advantages__intro {
