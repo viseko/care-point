@@ -101,9 +101,21 @@
 }
 
 @media (max-width: $tablet-width) {
-  .stats__item {
-    width: 50%;
-    margin-bottom: 30px;
+  .stats {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .stats__number {
+    font-size: 35px;
+
+    &::after {
+      @include size(85px, 3px);
+    }
+  }
+
+  .stats__text {
+    font-size: 20px;
   }
 
   .stats__icon-wrapper {
@@ -123,7 +135,12 @@
 }
 
 @media (max-width: $mobile-width) {
+  .stats {
+    padding-bottom: 50px;
+  }
+
   .stats__item {
-    width: 100%;
+    width: 50%;
+    margin-bottom: 40px;
   }
 }
