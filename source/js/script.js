@@ -6,3 +6,6 @@
 
 // Accordeons
 @@include("_accordeon.js");
+
+// Stats increment on scroll
+@@include("_stats.js");
