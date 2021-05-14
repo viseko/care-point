@@ -9,3 +9,6 @@
 
 // Stats increment on scroll
 @@include("_stats.js");
+
+//Gallery slider for mobile
+@@include("_gallery-slider.js");
