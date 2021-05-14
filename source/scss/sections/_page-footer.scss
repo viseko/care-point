@@ -151,6 +151,11 @@
   .page-footer__social-links {
     margin: auto;
   }
+
+  .page-footer__copyright {
+    padding: 30px 20px;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: $mobile-width) {
