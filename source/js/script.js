@@ -12,3 +12,6 @@
 
 //Gallery slider for mobile
 @@include("_gallery-slider.js");
+
+//Form validation and modal window
+@@include("_form.js");
