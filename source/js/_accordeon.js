@@ -5,16 +5,7 @@ if (accordeons.length) {
     const accordeonBtn = accordeon.querySelector(".accordeon__title");
     const accordeonContent = accordeon.querySelector(".accordeon__content");
 
-    if (accordeon.open) {
-      accordeon.classList.add("_open");
-      accordeonContent.normalHeight = accordeonContent.offsetHeight + 'px';
-      accordeonContent.style.height = accordeonContent.normalHeight;
-    } else {
-      accordeon.open = true;
-      accordeonContent.normalHeight = accordeonContent.offsetHeight + 'px';
-      accordeon.open = false;
-      accordeonContent.style.height = "0px";
-    }
+    calcAccordeonNormalHeight(accordeon, accordeonContent);
 
     accordeonContent.addEventListener("transitionend", function() {
       if (accordeon.open && !accordeon.classList.contains("_open")) {
@@ -34,5 +25,34 @@ if (accordeons.length) {
         accordeonContent.style.height = accordeonContent.normalHeight;
       }
     });
+  }
+}
+
+// Пересчитываем требуемую высоту открытых аккордионов при изменении ширины окна
+window.addEventListener("resize", function() {
+  if (accordeons.length) {
+    for (let i = 0; i < accordeons.length; i++) {
+      const accordeon = accordeons[i];
+      const accordeonContent = accordeon.querySelector(".accordeon__content");
+
+      calcAccordeonNormalHeight(accordeon, accordeonContent);
+    }
+  }
+});
+
+function calcAccordeonNormalHeight(accordeon, content) {
+  if (accordeon.open) {
+    if (!accordeon.classList.contains("_open")) {
+      accordeon.classList.add("_open");
+    }
+    content.style.height = null;
+    content.normalHeight = content.offsetHeight + 'px';
+    content.style.height = content.normalHeight;
+  } else {
+    accordeon.open = true;
+    content.style.height = null;
+    content.normalHeight = content.offsetHeight + 'px';
+    accordeon.open = false;
+    content.style.height = "0px";
   }
 }
