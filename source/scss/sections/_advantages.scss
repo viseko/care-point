@@ -82,8 +82,6 @@
 
 @media (max-width: $desktop-width-mid) {
   .advantages__wrapper {
-    @include webp-bg("../img/bg/doctor-desktop.png");
-
     padding-top: 80px;
     min-height: 500px;
     padding-bottom: 0;
@@ -137,6 +135,8 @@
 
 @media (max-width: $tablet-width) {
   .advantages__wrapper {
+    @include webp-bg("../img/bg/doctor-mobile.png");
+
     padding-bottom: 320px;
     background-size: 180px 320px;
   }

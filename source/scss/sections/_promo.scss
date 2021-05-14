@@ -78,3 +78,9 @@
     font-size: 20px;
   }
 }
+
+@media (max-width: $tablet-width) {
+  .promo {
+    @include webp-bg("../img/bg/bg-promo-mobile.jpg");
+  }
+}

@@ -102,6 +102,8 @@
 
 @media (max-width: $tablet-width) {
   .stats {
+    @include webp-bg("../img/bg/bg-stats-tablet.jpg");
+
     padding-top: 80px;
     padding-bottom: 80px;
   }
