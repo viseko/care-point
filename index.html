@@ -847,7 +847,7 @@
     <!-- form -->
     <div class="page-footer__form-wrapper">
       <h2 class="page-footer__title">Enquiry Form</h2>
-      <form class="page-footer__form footer-form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
+      <form class="page-footer__form footer-form js-appointment-form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
         <input class="footer-form__text-input" type="text" name="name" id="form-username" placeholder="Name" autocomplete="off" required>
         <input class="footer-form__text-input" type="tel" name="phone" id="form-phone" placeholder="Phone" autocomplete="off" required>
         <textarea class="footer-form__text-input" name="message" id="form-message" cols="30" rows="10" placeholder="Message" autocomplete="off"></textarea>
@@ -860,6 +860,17 @@
   </div>
 </footer>
 
+  <!-- modal window -->
+  <div class="modal modal-wrapper js-modal-wrapper">
+    <div class="modal modal-window js-modal-window">
+      <div class="modal-window__content">
+        <p>Data sent successfully! Our specialist will contact you shortly.</p>
+      </div>
+      <div class="modal-window__controls">
+        <button class="btn js-modal-close">Close</button>
+      </div>
+    </div>
+  </div>
   <!--main script -->
   <script src="js/script.min.js"></script>
 </body>
