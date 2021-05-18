@@ -30,7 +30,8 @@
   cursor: pointer;
   transition: 0.3s;
 
-  &::marker {
+  &::marker,
+  &::-webkit-details-marker {
     display: none;
   }
 
