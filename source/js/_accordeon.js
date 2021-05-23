@@ -21,7 +21,7 @@ if (accordeons.length) {
       } else {
         accordeon.classList.add("_open");
         accordeon.open = true;
-        accordeon.offsetWidth = accordeon.offsetWidth;
+        accordeon.offsetWidth;
         accordeonContent.style.height = accordeonContent.normalHeight;
       }
     });
@@ -41,9 +41,10 @@ window.addEventListener("resize", function() {
 });
 
 function calcAccordeonNormalHeight(accordeon, content) {
-  if (accordeon.open) {
+  if (accordeon.open || accordeon.dataset.ieOpen === "true") {
     if (!accordeon.classList.contains("_open")) {
       accordeon.classList.add("_open");
+      accordeon.open = true; // Для IE, не знакомого с details
     }
     content.style.height = null;
     content.normalHeight = content.offsetHeight + 'px';

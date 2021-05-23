@@ -13,6 +13,7 @@ const path = {
         html: [`${sourceFolder}/html/*.html`, `!${sourceFolder}/html/_*.html`],
         css: `${sourceFolder}/scss/style.scss`,
         js: `${sourceFolder}/js/script.js`,
+        jsCopy: `${sourceFolder}/js/copy/*.*`,
         img: [`${sourceFolder}/img/**/*.{png,jpg,gif,svg,ico,webp}`],
         svgIcons: `${sourceFolder}/icons/*.svg`,
         fonts: `${sourceFolder}/fonts/*.{ttf,woff,woff2}`,
@@ -50,6 +51,7 @@ const ttf2woff2 = require("gulp-ttf2woff2");
 const fonter = require("gulp-fonter");
 const svg2png = require("gulp-svg2png");
 const ghPages = require("gulp-gh-pages");
+const babel = require("gulp-babel");
 
 
 function browserSync() {
@@ -89,12 +91,21 @@ function css() {
 }
 
 function js() {
+    src(path.src.jsCopy)
+      .pipe(dest(path.build.js));
+
     src(path.src.js)
         .pipe(fileInclude())
+        .pipe(babel({
+          presets: ["@babel/preset-env"],
+        }))
         .pipe(dest(path.build.js))
 
     return src(path.src.js)
         .pipe(fileInclude())
+        .pipe(babel({
+            presets: ["@babel/preset-env"],
+        }))
         .pipe(uglify())
         .pipe(rename({
             extname: ".min.js"

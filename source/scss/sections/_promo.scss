@@ -43,7 +43,7 @@
 
 @media (max-width: $desktop-width-min) {
   .promo {
-    min-height: unset;
+    min-height: 200px;
     padding: 80px 0 80px;
   }
 
@@ -65,7 +65,6 @@
 
 @media (max-width: $tablet-width) {
   .promo {
-    min-height: unset;
     padding: 40px 0 60px;
   }
 

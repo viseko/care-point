@@ -8,7 +8,7 @@
 
   border: 0;
   outline: 0;
-  background-color: unset;
+  background: none;
 }
 
 .menu-btn__line {
@@ -41,5 +41,22 @@
     width: 80%;
     transform-origin: bottom right;
     transform: rotate(45deg);
+  }
+}
+
+// For IE11
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .menu-btn__line {
+    position: relative;
+  }
+
+  .menu-open {
+    .menu-btn__line:nth-of-type(2) {
+      top: -2px;
+    }
+
+    .menu-btn__line:nth-of-type(4) {
+      bottom: -2px;
+    }
   }
 }

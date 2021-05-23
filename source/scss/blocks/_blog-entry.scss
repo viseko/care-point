@@ -57,10 +57,12 @@
 }
 
 .blog-entry__author-name {
+  // Пока не требуется
 }
 
 .blog-entry__intro {
   margin: 0;
+  max-width: 100%;
 
   color: #6a6a6a;
 }
